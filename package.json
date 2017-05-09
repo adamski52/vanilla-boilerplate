@@ -4,7 +4,7 @@
   "description": "vanilla javascript project boilerplate",
   "main": "server.js",
   "scripts": {
-    "test": "karma start test/karma.conf.js",
+    "test": "karma start karma.conf.js",
     "start": "node server.js"
   },
   "author": "jonathan adamski",
