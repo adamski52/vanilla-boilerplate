@@ -37,6 +37,9 @@
         flavaFlav.setFavoriteFlavor(Flavor.getRandomFlavor());
         bobRoss.setFavoriteFlavor(Flavor.getRandomFlavor());
 
+        flavaFlav.setImage("img/yeah-boy.png");
+        bobRoss.setImage("img/bob-ross.jpg");
+
         people.push(flavaFlav);
         people.push(bobRoss);
 
@@ -50,8 +53,13 @@
     }
 
     function drawPerson(person) {
-        var element = document.createElement("h2");
-        element.innerHTML = person.getName() + " likes " + person.getFavoriteFlavor();
-        peopleContainer.appendChild(element);
+        var img = document.createElement("img");
+        img.src = person.getImage();
+
+        var heading = document.createElement("h2");
+        heading.innerHTML = person.getName() + " likes " + person.getFavoriteFlavor();
+
+        peopleContainer.appendChild(img);
+        peopleContainer.appendChild(heading);
     }
 })(window);

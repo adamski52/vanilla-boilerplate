@@ -1,7 +1,8 @@
 var Person = (function() {
     function Person(n) {
         var favoriteFlavor,
-            name = n;
+            name = n,
+            imageUrl;
 
         return {
             setFavoriteFlavor: function (flavor) {
@@ -12,6 +13,12 @@ var Person = (function() {
             },
             getName: function() {
                 return name;
+            },
+            setImage: function(url) {
+                imageUrl = url;
+            },
+            getImage: function() {
+                return imageUrl;
             }
         };
     }

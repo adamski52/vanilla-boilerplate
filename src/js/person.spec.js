@@ -31,4 +31,19 @@ describe('Person class', function() {
         expect(person.getFavoriteFlavor()).toEqual(flavor);
         expect(person2.getFavoriteFlavor()).toEqual(flavor2);
     });
+
+    it("should set an image per instance", function() {
+        var name = "Orville Redenbacher",
+            name2 = "Otis Spunkmeyer",
+            url1 = "popcorn.jpg",
+            url2 = "cookies.jpg",
+            person = new Person(name),
+            person2 = new Person(name2);
+
+        person.setImage(url1);
+        person2.setImage(url2);
+
+        expect(person.getImage()).toEqual(url1);
+        expect(person2.getImage()).toEqual(url2);
+    });
 });
