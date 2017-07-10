@@ -2,10 +2,12 @@
   "name": "vanilla-boilerplate",
   "version": "1.0.0",
   "description": "vanilla javascript project boilerplate",
-  "main": "server.js",
+  "main": "scripts/server.js",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "start": "node server.js"
+    "start": "node scripts/server.js",
+    "build": "node scripts/build.js",
+    "publish": "node scripts/deploy.js"
   },
   "author": "jonathan adamski",
   "license": "ISC",
@@ -13,12 +15,14 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "express-http-proxy": "^1.0.2",
+    "fs-extra": "^3.0.1",
     "jasmine": "^2.6.0",
     "karma": "^1.7.0",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.31",
-    "phantomjs-prebuilt": "^2.1.14"
+    "phantomjs-prebuilt": "^2.1.14",
+    "travis-ftpr": "^0.1.0"
   }
 }
